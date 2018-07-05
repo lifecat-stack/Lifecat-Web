@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+
+/* a鏍囩 */
+a {
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    /* color: #cdcdcd; */
+    text-decoration: none;
+}
+
+.overflowH {
+    overflow: hidden;
+}
+
+/* 娈佃惤 */
+.section-a {
+    padding-top: 80px;
+}
+
+.section-a-bottom {
+    padding-bottom: 60px;
+}
+
+.section-b {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.margin-topB {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section-a-title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #494949;
+    letter-spacing: 3px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.margin-top-none {
+    margin-top: 0;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.padding-topB {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+.padding-topB-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 绾挎潯 */
+.line-bottom {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.line-right {
+    border-right: 1px solid #f1f1f1;
+}
+
+.line-top {
+    border-top: 1px solid #f1f1f1;
+}
+
+/* 鍥剧墖 */
+.center-img {
+    margin: 0 auto;
+}
+
+.img-max {
+    width: 100%;
+    height: auto;
+}
+/* 鍏朵粬 */
+.hidden {
+    display: none;
+}
+
+.boxshadow {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 瀛椾綋棰滆壊 */
+.color-4d {
+    color: #4d4d4d;
+}
+/* 璁剧疆鈥滆В鍐虫柟妗堚€濋〉瀛椾綋 */
+.color-4d-2 {
+    color: #4d4d4d;
+    font-size:150%;
+    line-height:45px;
+    text-indent:43px;
+    word-wrap:break-word;
+    word-break:normal;
+}
+.color-4d-3 {
+    text-indent:2em;
+}
+
+.color-8b {
+    color: #8b8b8b;
+}
+
+.color-ed {
+    color: #ED8A25;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-black {
+    color: #000;
+}
+/* nav-tabs鏍峰紡娓呴浂 */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+{
+    border: none;
+}
+
+/* panel娓呴浂 */
+.panel {
+    border: 0;
+}
+
+.panel-default>.panel-heading {
+    background-color: transparent;
+}
+
+/* 鎸夐挳 */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus,
+.btn:active:focus, .btn:focus {
+    outline: none;
+}
+
+/* .table娓呴櫎---bootstrap */
+.table {
+    margin-bottom: 0
+}
