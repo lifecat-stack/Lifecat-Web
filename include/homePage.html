@@ -1,4 +1,6 @@
-
+<script src="../js/jquery/2.0.0/jquery.min.js"></script>
+<link href="../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
 
 <script>
     $(function () {
@@ -18,9 +20,6 @@
         });
     });
 </script>
-
-
-
 
 <style>
     .msg {
@@ -95,25 +94,25 @@
 
                         <table>
                             <tr class="msg">
-                                <span>昵称: <%=userPropertyDTO.getNickname()%> </span>
+                                <span>昵称:  </span>
                             </tr>
                             <br>
                             <tr class="msg">
-                                <span>个性签名: <%=userPropertyDTO.getSignature()%> </span>
+                                <span>个性签名:  </span>
                             </tr>
                             <tr class="msg">
-                                <span>性别: <%=userPropertyDTO.getSex()%> </span>
+                                <span>性别:  </span>
                             </tr>
                             <tr class="msg">
-                                <span>邮箱: <%=userPropertyDTO.getEmail()%> </span>
-                            </tr>
-                            <br>
-                            <tr class="msg">
-                                <span>生日: <%=userPropertyDTO.getBirthday()%>  </span>
+                                <span>邮箱:  </span>
                             </tr>
                             <br>
                             <tr class="msg">
-                                <span>地址: <%=userPropertyDTO.getLocation()%>  </span>
+                                <span>生日:   </span>
+                            </tr>
+                            <br>
+                            <tr class="msg">
+                                <span>地址:   </span>
                             </tr>
                         </table>
                     </div>
@@ -134,7 +133,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <img height="140" width="140" src=<%=userPropertyDTO.getIconPath()%>>
+                        <img height="140" width="140">
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -147,21 +146,21 @@
             <!-- 日记栏 -->
             <div class="row" status="no_diary-show">
 
-                <%--<!-- 搜索框 -->--%>
-                <%--<div class="row">--%>
-                <%--<div class="col-lg-4 col-lg-offset-8">--%>
-                <%--<com.wang.filter.form action="com.wang.service/Search" method="post">--%>
-                <%--<div class="input-group">--%>
-                <%--<input type="text" class="com.wang.filter.form-control" placeholder="请输入要查询的内容 "--%>
-                <%--name="keyword" value="${param.keyword}"> <span--%>
-                <%--class="input-group-btn">--%>
-                <%--<button class="btn btn-default" type="submit">搜索</button> </span>--%>
-                <%--</div>--%>
-                <%--<!-- /input-group -->--%>
-                <%--</com.wang.filter.form>--%>
-                <%--</div>--%>
-                <%--<!-- /.col-lg-6 -->--%>
-                <%--</div>--%>
+                <!--<%&#45;&#45;&lt;!&ndash; 搜索框 &ndash;&gt;&#45;&#45;%>-->
+                <!--<%&#45;&#45;<div class="row">&#45;&#45;%>-->
+                <!--<%&#45;&#45;<div class="col-lg-4 col-lg-offset-8">&#45;&#45;%>-->
+                <!--<%&#45;&#45;<com.wang.filter.form action="com.wang.service/Search" method="post">&#45;&#45;%>-->
+                <!--<%&#45;&#45;<div class="input-group">&#45;&#45;%>-->
+                <!--<%&#45;&#45;<input type="text" class="com.wang.filter.form-control" placeholder="请输入要查询的内容 "&#45;&#45;%>-->
+                <!--<%&#45;&#45;name="keyword" value="${param.keyword}"> <span&#45;&#45;%>-->
+                <!--<%&#45;&#45;class="input-group-btn">&#45;&#45;%>-->
+                <!--<%&#45;&#45;<button class="btn btn-default" type="submit">搜索</button> </span>&#45;&#45;%>-->
+                <!--<%&#45;&#45;</div>&#45;&#45;%>-->
+                <!--<%&#45;&#45;&lt;!&ndash; /input-group &ndash;&gt;&#45;&#45;%>-->
+                <!--<%&#45;&#45;</com.wang.filter.form>&#45;&#45;%>-->
+                <!--<%&#45;&#45;</div>&#45;&#45;%>-->
+                <!--<%&#45;&#45;&lt;!&ndash; /.col-lg-6 &ndash;&gt;&#45;&#45;%>-->
+                <!--<%&#45;&#45;</div>&#45;&#45;%>-->
 
                 <!-- /.row -->
                 <div class="row">
@@ -171,52 +170,28 @@
 
                     <div class="col-md-10">
                         <h2>成长日记:</h2>
-                        <%
-                            // 获取日记集
-                            List<DiaryDTO> diaries = null;
 
-                            diaries = (List<DiaryDTO>) request.getSession().getAttribute("diaryList");
+                                <table>
 
-                            // 获取diaries失败
-                            if (diaries == null) {
-                                diaries = new ArrayList<>(10);
-                                for (int i = 1; i < 10; i++) {
-                                    DiaryDTO defaultDiary = new DiaryDTO
-                                            .Builder(0)
-                                            .diaryName("我的第" + i + "篇成长寄语")
-                                            .diaryText("爱子心无尽，归家喜及辰")
-                                            .diaryDate(time.getCurrentTime())
-                                            .build();
-                                    diaries.add(defaultDiary);
-                                }
-                            }
-                        %>
-                        <table>
-                            <%
-                                /* 循环打印日记信息 */
-                                for (DiaryDTO diary : diaries) {
-                            %>
-                            <tr class="msg">
-                                <td>
-                                    <span><%=diary.getDiaryName() + ":"%></span>
-                                </td>
-                                <td>
-                                    <span><%="日记内容:" + diary.getDiaryText()%></span>
-                                </td>
-                                <td>
-                                    <span><%="发表时间:" + diary.getDiaryDate()%></span>
-                                </td>
-                            </tr>
-                            <%
-                                }
-                            %>
-                            <tr class="row">
+                                    <tr class="msg">
+                                        <td>
+                                            <span><%=diary.getDiaryName() + ":"%></span>
+                                        </td>
+                                        <td>
+                                            <span><%="日记内容:" + diary.getDiaryText()%></span>
+                                        </td>
+                                        <td>
+                                            <span><%="发表时间:" + diary.getDiaryDate()%></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="row">
                             <span><a href="#">1</a>&nbsp;&nbsp;
                             <a href="#">2</a>&nbsp;&nbsp;
                             <a href="#">3</a>&nbsp;&nbsp;
                             <a href="#">...</a> </span>
-                            </tr>
-                        </table>
+                                    </tr>
+                                </table>
                     </div>
                     <div class="col-md-1">
 
@@ -233,45 +208,18 @@
                     </div>
                     <div class="col-md-10">
                         <a href=imageshow.action><h2>成长相册:</h2></a>
-                        <%
-                            // 获取图片集
-                            List<ImageDTO> images = null;
 
-                            images = (List<ImageDTO>) request.getSession().getAttribute("imageList");
+                                <table>
+                                    <tr class="row">
 
-                            // 获取images失败
-                            if (images == null) {
-                                images = new ArrayList<>(10);
-                                for (int i = 0; i < 4; i++) {
-                                    ImageDTO defaultImage = new ImageDTO
-                                            .Builder(0, Directory.DEFAULT_IMAGE_PATH, time.getCurrentTime())
-                                            .imageClassId(0)
-                                            .imageText("美好的时刻，记录在lifecat")
-                                            .build();
-                                    images.add(defaultImage);
-                                }
-                            }
-                        %>
-                        <table>
-                            <tr class="row">
-                                <%
-                                    /*  循环打印demo图片img
-                                     *  倒叙:最新上传的图片最前展示
-                                     *  日志:demo_image_path打印demo图片链接
-                                     */
-                                    for (ImageDTO image : images) {
 
-                                %>
-
-                                <td class="col-md-3"><span><img src=<%=image.getImagePath()%>
+                                        <td class="col-md-3"><span><img src=<%=image.getImagePath()%>
                                                                         height="200" width="200"
                                                                 style="margin-top: 20px;"/> </span>
-                                </td>
-                                <%
-                                    }
-                                %>
-                            </tr>
-                        </table>
+                                        </td>
+
+                                    </tr>
+                                </table>
                     </div>
                     <div class="col-md-1">
 
