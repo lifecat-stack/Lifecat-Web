@@ -4,6 +4,12 @@
 
 <link href="../../css/mycss/diary_form.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/Sortable/1.6.0/Sortable.js"></script>
+
 <!--导入vue-->
 <script src="homePage.js"></script>
 
@@ -27,53 +33,53 @@
 </script>
 
 <!--日记复选框-->
-<script>
-    $(function () {
-        function initTableCheckbox() {
-            var $thr = $('table thead tr');
-            var $checkAllTh = $('<th><input type="checkbox" id="checkAll" name="checkAll" /></th>');
-            /*将全选/反选复选框添加到表头最前，即增加一列*/
-            $thr.prepend($checkAllTh);
-            /*“全选/反选”复选框*/
-            var $checkAll = $thr.find('input');
-            $checkAll.click(function (event) {
-                /*将所有行的选中状态设成全选框的选中状态*/
-                $tbr.find('input').prop('checked', $(this).prop('checked'));
-                /*并调整所有选中行的CSS样式*/
-                if ($(this).prop('checked')) {
-                    $tbr.find('input').parent().parent().addClass('warning');
-                } else {
-                    $tbr.find('input').parent().parent().removeClass('warning');
-                }
-                /*阻止向上冒泡，以防再次触发点击操作*/
-                event.stopPropagation();
-            });
-            /*点击全选框所在单元格时也触发全选框的点击操作*/
-            $checkAllTh.click(function () {
-                $(this).find('input').click();
-            });
-            var $tbr = $('table tbody tr');
-            var $checkItemTd = $('<td><input type="checkbox" name="checkItem" /></td>');
-            /*每一行都在最前面插入一个选中复选框的单元格*/
-            $tbr.prepend($checkItemTd);
-            /*点击每一行的选中复选框时*/
-            $tbr.find('input').click(function (event) {
-                /*调整选中行的CSS样式*/
-                $(this).parent().parent().toggleClass('warning');
-                /*如果已经被选中行的行数等于表格的数据行数，将全选框设为选中状态，否则设为未选中状态*/
-                $checkAll.prop('checked', $tbr.find('input:checked').length == $tbr.length ? true : false);
-                /*阻止向上冒泡，以防再次触发点击操作*/
-                event.stopPropagation();
-            });
-            /*点击每一行时也触发该行的选中操作*/
-            $tbr.click(function () {
-                $(this).find('input').click();
-            });
-        }
+<!--<script>-->
+<!--$(function () {-->
+<!--function initTableCheckbox() {-->
+<!--var $thr = $('table thead tr');-->
+<!--var $checkAllTh = $('<th style="width: %"><input type="checkbox" id="checkAll" name="checkAll" /></th>');-->
+<!--/*将全选/反选复选框添加到表头最前，即增加一列*/-->
+<!--$thr.prepend($checkAllTh);-->
+<!--/*“全选/反选”复选框*/-->
+<!--var $checkAll = $thr.find('input');-->
+<!--$checkAll.click(function (event) {-->
+<!--/*将所有行的选中状态设成全选框的选中状态*/-->
+<!--$tbr.find('input').prop('checked', $(this).prop('checked'));-->
+<!--/*并调整所有选中行的CSS样式*/-->
+<!--if ($(this).prop('checked')) {-->
+<!--$tbr.find('input').parent().parent().addClass('warning');-->
+<!--} else {-->
+<!--$tbr.find('input').parent().parent().removeClass('warning');-->
+<!--}-->
+<!--/*阻止向上冒泡，以防再次触发点击操作*/-->
+<!--event.stopPropagation();-->
+<!--});-->
+<!--/*点击全选框所在单元格时也触发全选框的点击操作*/-->
+<!--$checkAllTh.click(function () {-->
+<!--$(this).find('input').click();-->
+<!--});-->
+<!--var $tbr = $('table tbody tr');-->
+<!--var $checkItemTd = $('<td><input type="checkbox" name="checkItem" /></td>');-->
+<!--/*每一行都在最前面插入一个选中复选框的单元格*/-->
+<!--$tbr.prepend($checkItemTd);-->
+<!--/*点击每一行的选中复选框时*/-->
+<!--$tbr.find('input').click(function (event) {-->
+<!--/*调整选中行的CSS样式*/-->
+<!--$(this).parent().parent().toggleClass('warning');-->
+<!--/*如果已经被选中行的行数等于表格的数据行数，将全选框设为选中状态，否则设为未选中状态*/-->
+<!--$checkAll.prop('checked', $tbr.find('input:checked').length == $tbr.length ? true : false);-->
+<!--/*阻止向上冒泡，以防再次触发点击操作*/-->
+<!--event.stopPropagation();-->
+<!--});-->
+<!--/*点击每一行时也触发该行的选中操作*/-->
+<!--$tbr.click(function () {-->
+<!--$(this).find('input').click();-->
+<!--});-->
+<!--}-->
 
-        initTableCheckbox();
-    });
-</script>
+<!--initTableCheckbox();-->
+<!--});-->
+<!--</script>-->
 
 <!--顶部栏-->
 <style type="text/css">
@@ -135,10 +141,11 @@
 <style type="text/css">
     .search-form {
         height: 20px;
-        margin: 4px;
+        margin-bottom: 10px;
     }
 
     #diary-form table {
+        width: 100%;
         /**/
         table-layout: fixed;
         /**/
@@ -157,12 +164,13 @@
 
     #diary-form th {
         /**/
-        background-image: url("../../images/th_bg1.gif");
+        background: linear-gradient(to bottom, #ffffff, #adadad);
         /**/
         background-repeat: repeat-x;
         /**/
+        align-content: center;
         height: 32px;
-        width: 80px;
+        width: 15%;
     }
 
     #diary-form td {
@@ -171,7 +179,6 @@
 
     #diary-form td, th {
         border: 1px solid #cad9ea;
-        padding: 0 1em 0;
     }
 
     #diary-form tr.a1 {
@@ -318,17 +325,19 @@
                             <button id="diary-delete-all" class="row">删除全部</button>
                         </div>
 
-                        <div class="col-md-10">
+                        <div class="col-md-11">
                             <div id="diary-form">
                                 <table v-for="diary in diaries">
-                                    <th>序号</th>
-                                    <th>标题</th>
-                                    <th>内容</th>
-                                    <th>作者</th>
-                                    <th>日期</th>
-                                    <th>访问量</th>
+                                    <th style="width: 5%">√</th>
+                                    <th style="width: 10%">序号</th>
+                                    <th style="width: 15%">标题</th>
+                                    <th style="width: 25%">内容</th>
+                                    <th style="width: 15%">作者</th>
+                                    <th style="width: 15%">日期</th>
+                                    <th style="width: 15%">访问量</th>
 
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -337,6 +346,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -345,6 +355,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -353,6 +364,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -361,6 +373,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -369,6 +382,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -377,6 +391,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -385,6 +400,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -393,6 +409,7 @@
                                         <td>{{diary.views}}</td>
                                     </tr>
                                     <tr>
+                                        <td><input type="checkbox" name="checkAll"/></td>
                                         <td>{{diary.id}}</td>
                                         <td>{{diary.title}}</td>
                                         <td>{{diary.text}}</td>
@@ -405,6 +422,17 @@
                         </div>
 
                         <div class="col-md-1">
+                        </div>
+                    </div>
+
+                    <!--换页功能-->
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-4">
+                            <a id="diary-page-1" class="col-lg-1">1</a>
+                            <a id="diary-page-2" class="col-lg-1">2</a>
+                            <a id="diary-page-3" class="col-lg-1">3</a>
+                            <a id="diary-page-4" class="col-lg-1">4</a>
                         </div>
                     </div>
                 </div>
@@ -442,3 +470,25 @@
     </div>
 
 </div>
+
+<script>
+    new vue({
+        el: "#home-page",
+        data() {
+            return {
+                driaies:
+                    [
+                        {
+                            id: "1",
+                            title: "注册成功",
+                            text: "今天晴朗",
+                            author: "ten",
+                            date: "2018",
+                            views: "21"
+                        }
+                    ]
+            }
+        }
+    })
+    ;
+</script>
