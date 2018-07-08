@@ -1,0 +1,341 @@
+<script src="../../js/jquery/2.0.0/jquery.min.js"></script>
+<link href="../../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="../../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<link href="../../css/mycss/diary_form.css" rel="stylesheet">
+
+<script>
+    $(function () {
+
+        $("div[status]").hide();
+        $("div[status=usermsg-show]").show();
+        console.log("运行隐藏和显示表格");
+
+        $("a[status]").click(function () {
+            var status = $(this).attr("status");
+            console.log(status);
+            $("div[status]").hide();
+            $("div[status=" + status + "]").show();
+            //由于双引号没加，造成编译错误
+            $("div.dataType li").removeClass("active");
+            $(this).parent("li").addClass("active");
+        });
+    });
+</script>
+
+<style>
+    .msg {
+        background: #00a3ee;
+        width: 50px;
+        cursor: text;
+        font-family: "arial", serif;
+        font-size: 15pt;
+        padding: 2px
+    }
+
+    .bigmsg {
+        background: #f8f8f8;
+        color: #FF0000;
+        cursor: text;
+        font-family: "arial", serif;
+        font-size: 40px;
+        padding: 5px
+    }
+</style>
+
+<!--diary-list-->
+<style type="text/css">
+    #diary-form table {
+        /**/
+        table-layout: fixed;
+        /**/
+        empty-cells: show;
+        /**/
+        margin: 0 auto;
+        /**/
+        border-collapse: collapse;
+        /**/
+        border: 1px solid #cad9ea;
+        /**/
+        color: #666666;
+        /**/
+        font-size: 12px;
+    }
+
+    #diary-form th {
+        /**/
+        background-image: url("../../images/th_bg1.gif");
+        /**/
+        background-repeat: repeat-x;
+        /**/
+        height: 30px;
+    }
+
+    #diary-form td {
+        height: 20px;
+    }
+
+    #diary-form td, th {
+        border: 1px solid #cad9ea;
+        padding: 0 1em 0;
+    }
+
+    #diary-form tr.a1 {
+        background-color: #f5fafe;
+    }
+</style>
+
+<!-- top-页面状态栏 -->
+<div class="container">
+    <div class="jumbotron " status="information">
+        <h1>个人信息</h1>
+        <p>守护TA的成长</p>
+    </div>
+    <div class="jumbotron " status="diary-list">
+        <h1>日记动态</h1>
+        <p>送给未来的TA</p>
+    </div>
+    <div class="jumbotron " status="image-list">
+        <h1>图像记录</h1>
+        <p>记录美好时刻</p>
+    </div>
+    <div class="jumbotron " status="image-show">
+        <h1>成长相册</h1>
+        <p>记录美好时刻</p>
+    </div>
+    <div class="jumbotron " status="image-class-show">
+        <h1>智能图像分类</h1>
+        <p>通过图像处理算法，为相册进行整理</p>
+    </div>
+</div>
+
+<!-- left-页面切换栏 -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2  dataType">
+            <ul class="nav nav-pills nav-stacked">
+
+                <li role="presentation"><a href="#" status="information">个人信息</a>
+                </li>
+
+                <li role="presentation"><a href="#" status="diary-list">日记动态</a>
+                </li>
+
+                <li role="presentation"><a href="#" status="image-list">图像记录</a>
+                </li>
+
+                <li role="presentation"><a href="#" status="image-show">成长相册</a>
+                </li>
+
+                <li role="presentation"><a href="#" status="image-class-show">智能图像分类</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- right-主页面栏 -->
+        <div class="col-md-10 dataType">
+
+            <!-- 个人信息栏 -->
+            <div class="row" status="information">
+
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-10">
+                    <div class="col-md-4">
+                        <h2>个人信息:</h2>
+
+                        <table>
+                            <tr class="msg">
+                                昵称:
+                            </tr>
+                            <tr class="msg">
+                                个性签名:
+                            </tr>
+                            <tr class="msg">
+                               性别:
+                            </tr>
+                            <tr class="msg">
+                                邮箱:
+                            </tr>
+                            <tr class="msg">
+                                生日:
+                            </tr>
+                            <tr class="msg">
+                               地址:
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h2>成长格言:</h2>
+
+                        <table>
+                            <tr class="bigmsg">
+                                <span>路漫漫其修远兮，</span>
+                            </tr>
+                            <tr class="bigmsg">
+                                <span>吾将上下而求索。</span>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-4">
+                        <img height="140" width="140" src="../../images/usericon.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                </div>
+
+            </div>
+
+
+            <!-- 日记栏 -->
+            <div class="row" status="diary-list">
+
+                <!--<!-- 搜索框 -->
+                <!--<div class="row">--!>
+                <!--<div class="col-lg-4 col-lg-offset-8">--!>
+                <!--<com.wang.filter.form action="com.wang.service/Search" method="post">--!>
+                <!--<div class="input-group">--!>
+                <!--<input type="text" class="com.wang.filter.form-control" placeholder="请输入要查询的内容 "--!>
+                <!--name="keyword" value="${param.keyword}"> <span--!>
+                <!--class="input-group-btn">--!>
+                <!--<button class="btn btn-default" type="submit">搜索</button> </span>--!>
+                <!--</div>--!>
+                <!--<!-- /input-group -->
+                <!--</com.wang.filter.form>--!>
+                <!--</div>--!>
+                <!--<!-- /.col-lg-6 -->
+                <!--</div>--!>
+
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-1">
+                        <button id="diary-insert" class="row">新写日记</button>
+                        <button id="diary-delete" class="row">删除日记</button>
+                    </div>
+
+                    <div class="col-md-10">
+                        <div id="diary-form">
+                            <table>
+                                <th>序号</th>
+                                <th>标题</th>
+                                <th>内容</th>
+                                <th>作者</th>
+                                <th>日期</th>
+                                <th>访问量</th>
+
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 相册栏 -->
+            <div class="row" status="image-list">
+
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+
+                    <div class="col-md-10">
+
+                        <table>
+                            <tr class="row">
+
+                                <td class="col-md-3">
+                                    <img src='../../images/usericon.jpg' height=200 width=200
+                                         style="margin-top: 20px;"/>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-1">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

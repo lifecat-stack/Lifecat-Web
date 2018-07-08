@@ -1,0 +1,44 @@
+
+#diary-form {
+    height: 400px;
+    width: 800px;
+}
+
+#diary-form table {
+    /**/
+    table-layout: fixed;
+    /**/
+    empty-cells: show;
+    /**/
+    margin: 0 auto;
+    /**/
+    border-collapse: collapse;
+    /**/
+    border: 1px solid #cad9ea;
+    /**/
+    color: #666666;
+    /**/
+    font-size: 12px;
+}
+
+#diary-form th {
+    /**/
+    background-image: url("../../images/th_bg1.gif");
+    /**/
+    background-repeat: repeat-x;
+    /**/
+    height: 30px;
+}
+
+#diary-form td {
+    height: 20px;
+}
+
+#diary-form td, th {
+    border: 1px solid #cad9ea;
+    padding: 0 1em 0;
+}
+
+#diary-form tr.a1 {
+    background-color: #f5fafe;
+}

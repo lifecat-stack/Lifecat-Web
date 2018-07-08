@@ -1,1 +1,0 @@
-var thePath="https://www.ahtusi.com";

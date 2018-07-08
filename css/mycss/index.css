@@ -198,7 +198,7 @@ a {
 .slogan {
     width: 600px;
     height: 300px;
-    background: url(../../img/backgroundtext.png) no-repeat 0 0;
+    background: url(../../images/backgroundtext.png) no-repeat 0 0;
     display: inline-block;
     background-size: 600px;
 }
@@ -244,7 +244,7 @@ a {
     position: absolute;
     left: 20px;
     top: 14px;
-    background: url(../../img/peopleicon.png) no-repeat 0 0;
+    background: url(../../images/peopleicon.png) no-repeat 0 0;
     display: block;
     width: 24px;
     height: 24px;
@@ -252,15 +252,15 @@ a {
 }
 
 .main-entry a .title .seller {
-    background-image: url(../../img/emailicon.png);
+    background-image: url(../../images/emailicon.png);
 }
 
 .main-entry a .title .developer {
-    background-image: url(../../img/peopleicon.png);
+    background-image: url(../../images/peopleicon.png);
 }
 
 .main-entry a .title .developer2 {
-    background-image: url(../../img/talkicon.png);
+    background-image: url(../../images/talkicon.png);
 }
 
 .main-entry s {
@@ -393,7 +393,7 @@ a.seller-login:hover .seller-entry, a.seller-login:hover .inerval-line {
     float: left;
     margin-right: 5px;
     height: 28px;
-    background: url(../../img/trademark.png) no-repeat 0 0;
+    background: url(../../images/trademark.png) no-repeat 0 0;
 }
 
 a.pic1 {
