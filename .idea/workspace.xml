@@ -2,69 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba06ae23-baad-44fb-b5c5-bca7170f6399" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Read/js3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/mycss/diary_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/th_bg1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/component/homePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/ah.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/jquery.fullpage-2.9.5.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/code.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/fullpage-news1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/fullpage-news2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/fullpage-news3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/fullpage-news4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/fullpage-news5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images/nav-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images2/index_IdentityBlockchain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images2/index_IntelligentCommunity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images2/index_face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/images2/index_fullIdentityAuthenticationPlatform.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/indexfull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/js/canvas-particle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/js/indexfull.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/lib/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/lib/jquery-1.10.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/lib/jquery.fullpage-2.9.5.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/lib/scrolloverflow.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/solution-ch.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AhWeb/thePath.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Read/js2.md" beforeDir="false" afterPath="$PROJECT_DIR$/Read/js2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/mycss/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mycss/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/images/_notes/dwsync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/backgroundtext.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/backgroundtext.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/emailicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/emailicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/homeback.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/homeback.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/iconimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/iconimage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/peopleicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/peopleicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/talkicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/talkicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/trademark.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/trademark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/usericon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/usericon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/webicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/webicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/welcomelogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/welcomelogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/component/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/component/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/component/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project/build/webpack.base.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-project/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/component/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/component/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/component/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/component/homePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/imageshow.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/imageshow.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/imageshow2.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/imageshow2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/updiary.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/updiary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/upimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/upimage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/userhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/userhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -81,8 +28,17 @@
       <file leaf-file-name="userhome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/userhome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state relative-caret-position="483">
+              <caret line="27" column="51" selection-end-line="30" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/component/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -90,65 +46,60 @@
       <file leaf-file-name="imageshow.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/imageshow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="506">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page/component/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homePage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homePage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/component/homePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="337" selection-start-line="337" selection-end-line="337" />
+            <state relative-caret-position="3831">
+              <caret line="382" column="65" lean-forward="true" selection-start-line="382" selection-start-column="65" selection-end-line="382" selection-end-column="65" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aria.rnc" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
+      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/component/homePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="1138" column="22" selection-start-line="1138" selection-start-column="22" selection-end-line="1138" selection-end-column="22" />
+            <state relative-caret-position="308">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap/3.3.6/bootstrap.css">
+      <file leaf-file-name="upimage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/upimage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="1601" column="3" selection-start-line="1601" selection-start-column="3" selection-end-line="1601" selection-end-column="3" />
+            <state relative-caret-position="505">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap/3.3.6/bootstrap.min.css">
+      <file leaf-file-name="updiary.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/updiary.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="6929" column="102" selection-start-line="6929" selection-start-column="102" selection-end-line="6929" selection-end-column="102" />
+            <state relative-caret-position="571">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diary_form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mycss/diary_form.css">
+      <file leaf-file-name="imageshow2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/imageshow2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="43" column="1" lean-forward="true" selection-start-line="6" selection-end-line="43" selection-end-column="1" />
+            <state relative-caret-position="571">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -156,11 +107,12 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/component/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-286">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="-1804">
+              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2788#2795#0" expanded="true" />
+                <element signature="e#2784#2791#0" expanded="true" />
+                <element signature="e#5327#5334#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,6 +124,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="package_json" />
         <option value="HTML File" />
       </list>
     </option>
@@ -221,9 +174,18 @@
         <option value="$PROJECT_DIR$/Read/js2.md" />
         <option value="$PROJECT_DIR$/Read/js3.md" />
         <option value="$PROJECT_DIR$/my-project/index.html" />
-        <option value="$PROJECT_DIR$/page/userhome.html" />
         <option value="$PROJECT_DIR$/css/mycss/diary_form.css" />
         <option value="$PROJECT_DIR$/page/component/diary_form.html" />
+        <option value="$PROJECT_DIR$/page/component/package.json" />
+        <option value="$PROJECT_DIR$/page/component/image_list.html" />
+        <option value="$PROJECT_DIR$/page/component/user_msg.html" />
+        <option value="$PROJECT_DIR$/page/component/diary_list.html" />
+        <option value="$PROJECT_DIR$/page/component/homePage.js" />
+        <option value="$PROJECT_DIR$/page/userhome.html" />
+        <option value="$PROJECT_DIR$/page/upimage.html" />
+        <option value="$PROJECT_DIR$/page/updiary.html" />
+        <option value="$PROJECT_DIR$/page/imageshow2.html" />
+        <option value="$PROJECT_DIR$/page/imageshow.html" />
         <option value="$PROJECT_DIR$/page/component/header.html" />
         <option value="$PROJECT_DIR$/page/component/homePage.html" />
       </list>
@@ -241,12 +203,13 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/my-project/package.json" />
+      <path value="$PROJECT_DIR$/page/component/test/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="70" />
-    <option name="width" value="938" />
-    <option name="height" value="1088" />
+    <option name="width" value="940" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -262,11 +225,6 @@
             <path>
               <item name="lifecatweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="lifecatweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lifecatweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lifecatweb" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lifecatweb" type="b2602c69:ProjectViewProjectNode" />
@@ -289,7 +247,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ssmVue-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -299,16 +257,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Web\lifecatweb\page" />
-      <recent name="D:\Web\lifecatweb\my-project\src\assets\images" />
-      <recent name="D:\Web\lifecatweb\AhWeb" />
-      <recent name="D:\Web\lifecatweb\css\mycss" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Web\lifecatweb\page\component\test" />
       <recent name="D:\Web\lifecatweb\img" />
       <recent name="D:\Web\lifecatweb" />
       <recent name="D:\Web\lifecatweb\AhWeb\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Web\lifecatweb\page\component" />
+      <recent name="D:\Web\lifecatweb\page\component\test" />
+      <recent name="D:\Web\lifecatweb\page" />
+      <recent name="D:\Web\lifecatweb\my-project\src\assets\images" />
+      <recent name="D:\Web\lifecatweb\AhWeb" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,10 +285,11 @@
   </component>
   <component name="RunManager" selected="JavaScript Debug.userhome.html">
     <configuration name="ah.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/lifecatweb/AhWeb/ah.html" />
+    <configuration name="diary_list.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/page/component/test/diary_list.html" />
     <configuration name="header.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/page/component/header.html" />
+    <configuration name="homePage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/page/component/homePage.html" />
+    <configuration name="imageshow.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/page/imageshow.html" />
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/index.html" />
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/lifecatweb/index.html" />
-    <configuration name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/lifecatweb/test.html" />
     <configuration name="userhome.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/lifecatweb/page/userhome.html" />
     <configuration name="v-index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/lifecatweb/my-project/index.html" />
     <configuration name="vue" type="js.build_tools.npm" factoryName="npm">
@@ -345,17 +306,19 @@
       <item itemvalue="JavaScript Debug.userhome.html" />
       <item itemvalue="JavaScript Debug.v-index.html" />
       <item itemvalue="npm.vue" />
-      <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="JavaScript Debug.ah.html" />
-      <item itemvalue="JavaScript Debug.test.html" />
       <item itemvalue="JavaScript Debug.header.html" />
+      <item itemvalue="JavaScript Debug.imageshow.html" />
+      <item itemvalue="JavaScript Debug.homePage.html" />
+      <item itemvalue="JavaScript Debug.diary_list.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.diary_list.html" />
         <item itemvalue="JavaScript Debug.header.html" />
+        <item itemvalue="JavaScript Debug.homePage.html" />
+        <item itemvalue="JavaScript Debug.imageshow.html" />
         <item itemvalue="JavaScript Debug.ah.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +335,8 @@
       <workItem from="1530752384281" duration="19949000" />
       <workItem from="1530838925534" duration="10842000" />
       <workItem from="1531035594982" duration="3578000" />
-      <workItem from="1531049239465" duration="7465000" />
+      <workItem from="1531049239465" duration="9580000" />
+      <workItem from="1531059004016" duration="5652000" />
     </task>
     <task id="LOCAL-00001" summary="version1.0.0">
       <created>1530775764773</created>
@@ -395,20 +359,27 @@
       <option name="project" value="LOCAL" />
       <updated>1530867707619</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="version1.0.0&#10;  --2018.7.8">
+      <created>1531056810768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1531056810768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41834000" />
+    <option name="totallyTimeSpent" value="49601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1680498" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32867134" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32902297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -421,6 +392,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,30 +405,10 @@
     <MESSAGE value="version1.0.0" />
     <MESSAGE value="version1.0.0&#10;  --2018.7.6&#10;  --vue框架" />
     <MESSAGE value="version1.0.0&#10;  --2018.7.6&#10;  --Read笔记" />
-    <option name="LAST_COMMIT_MESSAGE" value="version1.0.0&#10;  --2018.7.6&#10;  --Read笔记" />
+    <MESSAGE value="version1.0.0&#10;  --2018.7.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="version1.0.0&#10;  --2018.7.8" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/bootstrap/3.3.6/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery/2.0.0/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myjs/rollbackground.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/t19ctgxcrlxxxxxxxx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -464,132 +416,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="97" column="1" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="161" column="1" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/jquery.fullpage-2.9.5.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="238" column="25" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/animate.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="3052" column="1" selection-start-line="3052" selection-start-column="1" selection-end-line="3052" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="7660" column="45" selection-start-line="7660" selection-start-column="45" selection-end-line="7660" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/solution-ch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="212" column="7" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/js/canvas-particle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/js/indexfull.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/lib/scrolloverflow.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16456">
-          <caret line="751" column="110" selection-start-line="751" selection-start-column="110" selection-end-line="751" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/lib/jquery-1.10.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215578">
-          <caret line="9811" column="13" selection-start-line="9811" selection-start-column="13" selection-end-line="9811" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/lib/jquery.fullpage-2.9.5.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19514">
-          <caret line="893" column="15" selection-start-line="893" selection-start-column="15" selection-end-line="893" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/lib/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17160">
-          <caret line="784" column="81" selection-start-line="784" selection-start-column="81" selection-end-line="784" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/thePath.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/indexfull.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AhWeb/ah.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/reset.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/responsive.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/jquery.fullpage-2.9.5.min.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/animate.min.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/bootstrap.min.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/css/custom.css" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/solution-ch.html" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/js/canvas-particle.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/js/common.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/js/indexfull.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/lib/scrolloverflow.min.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/lib/jquery-1.10.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/lib/jquery.fullpage-2.9.5.min.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/lib/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/thePath.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/indexfull.js" />
+    <entry file="file://$PROJECT_DIR$/AhWeb/ah.html" />
     <entry file="file://$PROJECT_DIR$/userhome.html" />
     <entry file="file://$PROJECT_DIR$/Read/js2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -602,18 +446,6 @@
           </second_editor>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/imageshow2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/updiary.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-project/src/assets/images/logo.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/my-project/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -636,10 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#140#161#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,9 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,16 +515,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5148">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/upimage.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/page/component/header.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -708,20 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/th_bg1.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mycss/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7590">
           <caret line="345" selection-start-line="345" selection-end-line="353" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap/3.3.6/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="1601" column="3" selection-start-line="1601" selection-start-column="3" selection-end-line="1601" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -739,59 +546,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/component/header.html">
+    <entry file="file://$PROJECT_DIR$/page/component/diary_form.html" />
+    <entry file="file://$PROJECT_DIR$/css/bootstrap/3.3.6/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2788#2795#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="109560">
+          <caret line="4980" column="18" selection-start-line="4980" selection-start-column="18" selection-end-line="4980" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/imageshow.html">
+    <entry file="file://$PROJECT_DIR$/page/component/test/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="22">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/component/homePage.html">
+    <entry file="file://$PROJECT_DIR$/page/component/test/diary_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="337" selection-start-line="337" selection-end-line="337" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/userhome.html">
+    <entry file="file://$PROJECT_DIR$/page/component/test/user_msg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/component/diary_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="506">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap/3.3.6/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="6929" column="102" selection-start-line="6929" selection-start-column="102" selection-end-line="6929" selection-end-column="102" />
+        <state relative-caret-position="337">
+          <caret line="3451" column="67" selection-start-line="3451" selection-start-column="67" selection-end-line="3451" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/component/test/image_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/component/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/upimage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/updiary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/imageshow2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/userhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="27" column="51" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/component/iconimage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/imageshow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/component/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="242">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/component/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1804">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2784#2791#0" expanded="true" />
+            <element signature="e#5327#5334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/component/homePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3831">
+          <caret line="382" column="65" lean-forward="true" selection-start-line="382" selection-start-column="65" selection-end-line="382" selection-end-column="65" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

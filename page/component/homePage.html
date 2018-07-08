@@ -1,13 +1,17 @@
 <script src="../../js/jquery/2.0.0/jquery.min.js"></script>
 <link href="../../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
 <script src="../../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
 <link href="../../css/mycss/diary_form.css" rel="stylesheet">
+
+<!--导入vue-->
+<script src="homePage.js"></script>
 
 <script>
     $(function () {
 
         $("div[status]").hide();
-        $("div[status=usermsg-show]").show();
+        $("div[status=diary-list]").show();
         console.log("运行隐藏和显示表格");
 
         $("a[status]").click(function () {
@@ -22,28 +26,118 @@
     });
 </script>
 
+<!--日记复选框-->
+<script>
+    $(function () {
+        function initTableCheckbox() {
+            var $thr = $('table thead tr');
+            var $checkAllTh = $('<th><input type="checkbox" id="checkAll" name="checkAll" /></th>');
+            /*将全选/反选复选框添加到表头最前，即增加一列*/
+            $thr.prepend($checkAllTh);
+            /*“全选/反选”复选框*/
+            var $checkAll = $thr.find('input');
+            $checkAll.click(function (event) {
+                /*将所有行的选中状态设成全选框的选中状态*/
+                $tbr.find('input').prop('checked', $(this).prop('checked'));
+                /*并调整所有选中行的CSS样式*/
+                if ($(this).prop('checked')) {
+                    $tbr.find('input').parent().parent().addClass('warning');
+                } else {
+                    $tbr.find('input').parent().parent().removeClass('warning');
+                }
+                /*阻止向上冒泡，以防再次触发点击操作*/
+                event.stopPropagation();
+            });
+            /*点击全选框所在单元格时也触发全选框的点击操作*/
+            $checkAllTh.click(function () {
+                $(this).find('input').click();
+            });
+            var $tbr = $('table tbody tr');
+            var $checkItemTd = $('<td><input type="checkbox" name="checkItem" /></td>');
+            /*每一行都在最前面插入一个选中复选框的单元格*/
+            $tbr.prepend($checkItemTd);
+            /*点击每一行的选中复选框时*/
+            $tbr.find('input').click(function (event) {
+                /*调整选中行的CSS样式*/
+                $(this).parent().parent().toggleClass('warning');
+                /*如果已经被选中行的行数等于表格的数据行数，将全选框设为选中状态，否则设为未选中状态*/
+                $checkAll.prop('checked', $tbr.find('input:checked').length == $tbr.length ? true : false);
+                /*阻止向上冒泡，以防再次触发点击操作*/
+                event.stopPropagation();
+            });
+            /*点击每一行时也触发该行的选中操作*/
+            $tbr.click(function () {
+                $(this).find('input').click();
+            });
+        }
+
+        initTableCheckbox();
+    });
+</script>
+
+<!--顶部栏-->
+<style type="text/css">
+    #top-container {
+        height: 140px;
+    }
+
+    .jumbotron {
+        height: 120px;
+        padding: 10px;
+    }
+
+    .jumbotron text {
+        font-size: 50px;
+        font-family: 楷体;
+        padding-right: 4px;
+        padding-bottom: 4px;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+    }
+</style>
+
+<!--边框调整-->
+<script type="text/javascript">
+    function f() {
+        var topTextes = document.getElementsByClassName("top-text");
+        for (topText in topTextes) {
+            topText.onmouseover = function () {
+                alert("hhh")
+                topText.style.borderBottom = "none";
+                topText.style.borderRight = "none";
+                topText.style.borderTop = "1px solid";
+                topText.style.borderLeft = "1px solid";
+            }
+        }
+    }
+</script>
+
+<!--个人信息table-->
 <style>
     .msg {
-        background: #00a3ee;
+        border: 1px solid;
+        text-align: left;
         width: 50px;
-        cursor: text;
         font-family: "arial", serif;
         font-size: 15pt;
         padding: 2px
     }
 
     .bigmsg {
-        background: #f8f8f8;
-        color: #FF0000;
-        cursor: text;
+        color: #00bbee;
         font-family: "arial", serif;
-        font-size: 40px;
-        padding: 5px
+        font-size: 24px;
+        padding: 5px;
     }
 </style>
 
 <!--diary-list-->
 <style type="text/css">
+    .search-form {
+        height: 20px;
+        margin: 4px;
+    }
+
     #diary-form table {
         /**/
         table-layout: fixed;
@@ -58,7 +152,7 @@
         /**/
         color: #666666;
         /**/
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #diary-form th {
@@ -67,11 +161,12 @@
         /**/
         background-repeat: repeat-x;
         /**/
-        height: 30px;
+        height: 32px;
+        width: 80px;
     }
 
     #diary-form td {
-        height: 20px;
+        height: 24px;
     }
 
     #diary-form td, th {
@@ -84,258 +179,266 @@
     }
 </style>
 
-<!-- top-页面状态栏 -->
-<div class="container">
-    <div class="jumbotron " status="information">
-        <h1>个人信息</h1>
-        <p>守护TA的成长</p>
-    </div>
-    <div class="jumbotron " status="diary-list">
-        <h1>日记动态</h1>
-        <p>送给未来的TA</p>
-    </div>
-    <div class="jumbotron " status="image-list">
-        <h1>图像记录</h1>
-        <p>记录美好时刻</p>
-    </div>
-    <div class="jumbotron " status="image-show">
-        <h1>成长相册</h1>
-        <p>记录美好时刻</p>
-    </div>
-    <div class="jumbotron " status="image-class-show">
-        <h1>智能图像分类</h1>
-        <p>通过图像处理算法，为相册进行整理</p>
-    </div>
-</div>
+<div id="home-page">
 
-<!-- left-页面切换栏 -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-2  dataType">
-            <ul class="nav nav-pills nav-stacked">
-
-                <li role="presentation"><a href="#" status="information">个人信息</a>
-                </li>
-
-                <li role="presentation"><a href="#" status="diary-list">日记动态</a>
-                </li>
-
-                <li role="presentation"><a href="#" status="image-list">图像记录</a>
-                </li>
-
-                <li role="presentation"><a href="#" status="image-show">成长相册</a>
-                </li>
-
-                <li role="presentation"><a href="#" status="image-class-show">智能图像分类</a>
-                </li>
-
-            </ul>
+    <!-- top-页面状态栏 -->
+    <div id="top-container" class="container">
+        <div class="jumbotron " status="information">
+            <text class="top-text">个人信息</text>
+            <p>守护TA的成长</p>
         </div>
+        <div class="jumbotron " status="diary-list">
+            <text class="top-text">日记动态</text>
+            <p>送给未来的TA</p>
+        </div>
+        <div class="jumbotron " status="image-list">
+            <text class="top-text">图像记录</text>
+            <p>记录美好时刻</p>
+        </div>
+        <div class="jumbotron " status="image-show">
+            <text class="top-text">成长相册</text>
+            <p>记录美好时刻</p>
+        </div>
+        <div class="jumbotron " status="image-class-show">
+            <text class="top-text">智能图像分类</text>
+            <p>通过图像处理算法，为相册进行整理</p>
+        </div>
+    </div>
 
-        <!-- right-主页面栏 -->
-        <div class="col-md-10 dataType">
+    <!-- 主界面栏 -->
+    <div class="container">
 
-            <!-- 个人信息栏 -->
-            <div class="row" status="information">
+        <div class="row">
 
-                <div class="col-md-1">
-                </div>
+            <!--左侧切换栏-->
+            <div class="col-md-2  dataType">
+                <ul class="nav nav-pills nav-stacked">
 
-                <div class="col-md-10">
-                    <div class="col-md-4">
-                        <h2>个人信息:</h2>
+                    <li role="presentation" class=""><a href="#" status="information">个人信息</a>
+                    </li>
 
-                        <table>
-                            <tr class="msg">
-                                昵称:
-                            </tr>
-                            <tr class="msg">
-                                个性签名:
-                            </tr>
-                            <tr class="msg">
-                               性别:
-                            </tr>
-                            <tr class="msg">
-                                邮箱:
-                            </tr>
-                            <tr class="msg">
-                                生日:
-                            </tr>
-                            <tr class="msg">
-                               地址:
-                            </tr>
-                        </table>
-                    </div>
+                    <li role="presentation" class="active"><a href="#" status="diary-list">日记动态</a>
+                    </li>
 
-                    <div class="col-md-4">
-                        <h2>成长格言:</h2>
+                    <li role="presentation" class=""><a href="#" status="image-list">图像记录</a>
+                    </li>
 
-                        <table>
-                            <tr class="bigmsg">
-                                <span>路漫漫其修远兮，</span>
-                            </tr>
-                            <tr class="bigmsg">
-                                <span>吾将上下而求索。</span>
-                            </tr>
-                        </table>
-                    </div>
+                    <li role="presentation" class=""><a href="#" status="image-show">成长相册</a>
+                    </li>
 
-                    <div class="col-md-4">
-                        <img height="140" width="140" src="../../images/usericon.jpg">
-                    </div>
-                </div>
+                    <li role="presentation" class=""><a href="#" status="image-class-show">智能图像分类</a>
+                    </li>
 
-                <div class="col-md-1">
-                </div>
-
+                </ul>
             </div>
 
+            <!-- right-主页面栏 -->
+            <div class="col-md-10 dataType">
 
-            <!-- 日记栏 -->
-            <div class="row" status="diary-list">
+                <!-- 个人信息栏 -->
+                <div class="row" status="information">
 
-                <!--<!-- 搜索框 -->
-                <!--<div class="row">--!>
-                <!--<div class="col-lg-4 col-lg-offset-8">--!>
-                <!--<com.wang.filter.form action="com.wang.service/Search" method="post">--!>
-                <!--<div class="input-group">--!>
-                <!--<input type="text" class="com.wang.filter.form-control" placeholder="请输入要查询的内容 "--!>
-                <!--name="keyword" value="${param.keyword}"> <span--!>
-                <!--class="input-group-btn">--!>
-                <!--<button class="btn btn-default" type="submit">搜索</button> </span>--!>
-                <!--</div>--!>
-                <!--<!-- /input-group -->
-                <!--</com.wang.filter.form>--!>
-                <!--</div>--!>
-                <!--<!-- /.col-lg-6 -->
-                <!--</div>--!>
-
-                <!-- /.row -->
-                <div class="row">
                     <div class="col-md-1">
-                        <button id="diary-insert" class="row">新写日记</button>
-                        <button id="diary-delete" class="row">删除日记</button>
                     </div>
 
                     <div class="col-md-10">
-                        <div id="diary-form">
+                        <div class="col-md-4">
+                            <h3>个人信息</h3>
                             <table>
-                                <th>序号</th>
-                                <th>标题</th>
-                                <th>内容</th>
-                                <th>作者</th>
-                                <th>日期</th>
-                                <th>访问量</th>
-
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>昵称:{{user_nickname}}</td>
                                 </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>个性签名:{{user_signature}}</td>
                                 </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>性别:{{user_sex}}</td>
                                 </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>邮箱:{{user_email}}</td>
                                 </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>生日:{{user_birthday}}</td>
                                 </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                </tr>
-                                <tr>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
-                                    <td>data</td>
+                                <tr class="msg">
+                                    <td>地址:{{user_location}}</td>
                                 </tr>
                             </table>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h3>成长格言:</h3>
+                            <table>
+                                <tr class="bigmsg">
+                                    <td>路漫漫其修远兮，</td>
+                                </tr>
+                                <tr class="bigmsg">
+                                    <td>吾将上下而求索。</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-4">
+                            <img height="140" width="140" src="../../images/usericon.jpg"/>
                         </div>
                     </div>
 
                     <div class="col-md-1">
                     </div>
+
                 </div>
-            </div>
 
 
-            <!-- 相册栏 -->
-            <div class="row" status="image-list">
+                <!-- 日记栏 -->
+                <div class="row" status="diary-list">
 
-                <div class="row">
-                    <div class="col-md-1">
+                    <!-- 搜索框 -->
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-6">
+                            <form method="post" action="">
+                                <select class="col-lg-3 search-form">
+                                    <option value="1">序号</option>
+                                    <option value="2">标题</option>
+                                    <option value="3">作者</option>
+                                    <option value="4">日期</option>
+                                </select>
+                                <input id="search-text" type="text" class="col-lg-5  search-form"
+                                       placeholder="请输入要查询的内容"
+                                       name="keyword">
+                                <button class="btn-default col-lg-3  search-form" type="submit">搜索日记</button>
+                            </form>
+                        </div>
                     </div>
 
-                    <div class="col-md-10">
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-1">
+                            <button id="diary-insert" class="row">新写日记</button>
+                            <button id="diary-delete" class="row">删除所选</button>
+                            <button id="diary-delete-all" class="row">删除全部</button>
+                        </div>
 
-                        <table>
-                            <tr class="row">
+                        <div class="col-md-10">
+                            <div id="diary-form">
+                                <table v-for="diary in diaries">
+                                    <th>序号</th>
+                                    <th>标题</th>
+                                    <th>内容</th>
+                                    <th>作者</th>
+                                    <th>日期</th>
+                                    <th>访问量</th>
 
-                                <td class="col-md-3">
-                                    <img src='../../images/usericon.jpg' height=200 width=200
-                                         style="margin-top: 20px;"/>
-                                </td>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{diary.id}}</td>
+                                        <td>{{diary.title}}</td>
+                                        <td>{{diary.text}}</td>
+                                        <td>{{diary.author}}</td>
+                                        <td>{{diary.date}}</td>
+                                        <td>{{diary.views}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
 
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="col-md-1">
+                        <div class="col-md-1">
+                        </div>
                     </div>
                 </div>
+
+
+                <!-- 相册栏 -->
+                <div class="row" status="image-list">
+
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-10">
+
+                            <table>
+                                <tr class="row">
+
+                                    <td class="col-md-3">
+                                        <img src='../../images/usericon.jpg' height=200 width=200
+                                             style="margin-top: 20px;"/>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-
-
         </div>
     </div>
+
 </div>

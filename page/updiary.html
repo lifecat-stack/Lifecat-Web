@@ -1,33 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 59682
-  Date: 2018/4/20
-  Time: 23:22
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" import="java.util.*" %>
-<%@include file="../../include/header.jsp"%>
-<%@include file="../../include/top.jsp"%>
+<!DOCTYPE html>
 
-<%-- 上传照片 --%>
+<html>
 
-<div class="container">
-	<div class="table-responsive">
-		<h2>书写成长寄语</h2>
-		<form method="post" id="editForm" action="diary_upload.do">
-			<div class="form-group">
-				<textarea class="form-control" rows="1"  name="diaryname"
-					id="diaryname">name...</textarea>
-			</div>
-			<div class="form-group">
-				<textarea class="form-control" rows="6"  name="diarydescription"
-					id="diarydescription">description...</textarea>
-			</div>
-			<button type="submit" class="btn btn-primary btn-md btn-block">提交</button>
-		</form>
-	</div>
-</div>
+<head>
+	<!--编码信息-->
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+	<!--引用库：bootstrap-->
+	<script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/bootstrap/3.3.6/bootstrap.min.css">
+	<!--引用库：jQuery-->
+	<script src="../js/jquery/2.0.0/jquery.min.js"></script>
+</head>
 
+<body>
 
-<%@include file="../../include/footer.jsp"%>
+<div id="page1"></div>
+<div id="page2"></div>
+<div id="page3"></div>
+
+<script>
+    $("#page1").load("component/header.html");
+    $("#page2").load("component/homePage.html");
+    $("#page3").load("component/footer.html");
+</script>
+
+<!--引用外部js库：jQuery-->
+<script src="../js/t19ctgxcrlxxxxxxxx.js"></script>
+
+</body>
+</html>
