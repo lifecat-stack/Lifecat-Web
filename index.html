@@ -52,33 +52,7 @@
         @import url("css/mycss/index.css");
     </style>
 
-
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.bootcss.com/Sortable/1.6.0/Sortable.js"></script>
-
 </head>
-
-<script>
-    new vue({
-        el: "#main",
-        data: {
-            abc: "aaa",
-            diaries: [
-                {
-                    id: "1",
-                    title: "注册成功",
-                    text: "今天晴朗",
-                    author: "ten",
-                    date: "2018",
-                    views: "21"
-                }
-            ]
-        }
-    });
-</script>
 
 <body>
 
@@ -231,7 +205,7 @@
                     <div class="main-entry">
                         <a data-toggle="modal" data-target="#login" href="" class="developer-login">
                             <span class="title">
-                                <i class="developer"></i>{{abc}}</span><s></s> </a>
+                                <i class="developer"></i>立即登录</span><s></s> </a>
                         <a data-toggle="modal" data-target="#register" href="" class="personal-login">
                             <span class="title">
                                 <i class="developer"></i>立即注册</span><s></s> </a>
@@ -268,6 +242,10 @@
         </div>
     </div>
 </div>
+
+<script>
+
+</script>
 
 <!--引用外部js库：背景滚动-->
 <script type="text/javascript" src="js/myjs/rollbackground.js"></script>

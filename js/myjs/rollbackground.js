@@ -1,3 +1,4 @@
+// 背景滚动效果
 var slideEle = slider($('.items'));
 
 function slider(elem) {
