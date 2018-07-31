@@ -1,22 +1,27 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="container-fluid">
+      <navbar></navbar>
+      <home>
+        <!--<router-view></router-view>-->
+      </home>
+    </div>
   </div>
 </template>
 
 <script>
+  import Navbar from "./components/Navbar";
+  import Home from "./components/Home";
+
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      Navbar,
+      Home
+    }
   }
 </script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+  @import "assets/css/home-base.css";
 </style>
