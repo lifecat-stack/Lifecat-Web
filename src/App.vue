@@ -1,27 +1,18 @@
 <template>
   <div id="app">
-    <div class="container-fluid">
-      <navbar></navbar>
-      <home>
-        <!--<router-view></router-view>-->
-      </home>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Navbar from "./components/Navbar";
-  import Home from "./components/Home";
-
   export default {
-    name: 'App',
-    components: {
-      Navbar,
-      Home
-    }
+    name: 'App'
   }
 </script>
 
 <style>
-  @import "assets/css/home-base.css";
+  #app{
+    width: 100%;
+    height: 100%;
+  }
 </style>
