@@ -41,7 +41,7 @@ README -- LifeCat Version3 Front
 *****************************************************************************
  #### _@项目分析_
  
- [项目流程分析介绍](https://zhuanlan.zhihu.com/p/41185446) (点击链接)  
+ [项目流程分析介绍](https://zhuanlan.zhihu.com/p/41209693) (点击链接)  
  
  进行了项目结构、项目目录、项目流程的分析
 *****************************************************************************
@@ -50,3 +50,8 @@ README -- LifeCat Version3 Front
  
  #### [LifeCat version2 version1相应SSM后台管理系统](https://github.com/kevinten10/SSM-lifecat)
  #### [LifeCat version3 前后端分离springboot后端系统](https://github.com/kevinten10/springboot-lifecat)
+*****************************************************************************
+ #### [LifeCat wechat 微信移动端小程序开发](https://github.com/kevinten10/WeChat-lifecat)
+ #### [LifeCat hadoop 分布式平台进行数据处理](https://github.com/kevinten10/Hadoop-lifecat)
+ #### [LifeCat android 相应Android相册应用](https://github.com/kevinten10/Android-lifecat)
+ #### [LifeCat python 机器学习进行图像智能处理](https://github.com/kevinten10/Python-lifecat)
