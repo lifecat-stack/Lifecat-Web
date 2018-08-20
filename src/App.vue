@@ -9,4 +9,3 @@
     name: 'App'
   }
 </script>
-
