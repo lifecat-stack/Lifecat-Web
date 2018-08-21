@@ -1,133 +1,234 @@
 <template>
-  <div class="app-container">
-    <el-table :data="list" v-loading="listLoading" element-loading-text="Loading" border fit highlight-current-row>
+  <content class="main">
 
-      <!--userId-->
-      <el-table-column label='ID' width="95" align="center">
-        <template slot-scope="scope">
-          {{scope.row.userId}}
-        </template>
-      </el-table-column>
+    <section class="mainCon">
 
-      <!--userAccountName-->
-      <el-table-column label="用户名" width="110" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userAccountName}}</span>
-        </template>
-      </el-table-column>
+      <section class="con">
+        <div class="conTopPhoto">
+          <button class="closeIcon" type="button"></button>
+          <div class="addBtnCon">
+            <button class="addBtn" type="button">
+						<span class="addBtnC">
+						</span>
+              <br>
+              创建动态
+              <input class="btnFile" type="file" accept="image/jpeg" name="">
+            </button>
+          </div>
+        </div>
+      </section>
 
-      <!--userName-->
-      <el-table-column label="昵称" width="110" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userName}}</span>
-        </template>
-      </el-table-column>
+      <div class="listUser">
+        <div>
+          <dynamic-adaptor></dynamic-adaptor>
+          <dynamic-adaptor></dynamic-adaptor>
+        </div>
+      </div>
 
-      <!--userSex-->
-      <el-table-column label="性别" width="110" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userSex}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userEmail-->
-      <el-table-column label="邮箱" width="150" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userEmail}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userLocation-->
-      <el-table-column label="所在位置" width="150" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userLocation}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userPhoneNumber-->
-      <el-table-column label="电话号码" width="150" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userPhoneNumber}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userGmtCreate-->
-      <el-table-column label="注册时间" width="150" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userGmtCreate}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userLastLogin-->
-      <el-table-column label="最后登录" width="150" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userLastLogin}}</span>
-        </template>
-      </el-table-column>
-
-      <!--userLoginCount-->
-      <el-table-column label="访问次数" width="110" align="center">
-        <template slot-scope="scope">
-          <span>{{scope.row.userLoginCount}}</span>
-        </template>
-      </el-table-column>
-
-      <!--isUserDeleted-->
-      <el-table-column label="启用状态" width="110" align="center" class-name="status-col">
-        <template slot-scope="scope">
-          <el-tag :type="scope.row.isUserDeleted | statusFilter">{{scope.row.isUserDeleted}}</el-tag>
-        </template>
-      </el-table-column>
-
-      <!--userRole-->
-      <el-table-column label="权限" width="100" align="center" class-name="status-col">
-        <template slot-scope="scope">
-          <el-tag :type="scope.row.userRole | statusFilter">{{scope.row.userRole}}</el-tag>
-        </template>
-      </el-table-column>
-
-      <el-table-column label="Actions" min-width="200" align="center" prop="created_at">
-        <template slot-scope="scope">
-          <i class="el-icon-time"></i>
-        </template>
-      </el-table-column>
-
-    </el-table>
-  </div>
+    </section>
+  </content>
 </template>
 
 <script>
-  import { getUserList } from '@/api/databoard'
+  import DynamicAdaptor from '@/components/DynamicAdaptor'
 
   export default {
-    data() {
-      return {
-        list: null,
-        listLoading: true
-      }
-    },
-    filters: {
-      statusFilter(status) {
-        const statusMap = {
-          published: 'success',
-          draft: 'gray',
-          deleted: 'danger'
-        }
-        return statusMap[status]
-      }
-    },
-    created() {
-      this.fetchData()
-    },
-    methods: {
-      fetchData() {
-        this.listLoading = true
-        getUserList().then(response => {
-          console.log('res' + response.data.userList)
-          this.list = response.data.userList
-          this.listLoading = false
-        })
-      }
+    name: 'dynamic',
+    components:{
+      DynamicAdaptor
     }
   }
 </script>
+
+<style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a, a:hover {
+    text-decoration: none;
+    color: #003569;
+  }
+
+  ul, li, th, tr, td {
+    list-style: none;
+  }
+
+  input {
+    outline: none;
+    -webkit-appearance: none;
+    border: 0;
+  }
+
+  body, button, input, textarea {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    min-width: 1280px;
+  }
+
+  .navConSearch input {
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    padding: 3px 10px 3px 26px;
+    height: 28px;
+    -webkit-box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fafafa;
+    color: #999;
+  }
+
+  .navConLogo a {
+    float: left;
+    width: 176px;
+    height: 35px;
+    background-image: url(../img/logo.png);
+    background-position: -504px -176px;
+  }
+
+  .navConUser a {
+    float: left;
+    width: 24px;
+    height: 24px;
+  }
+
+  .navConUser a:nth-child(1) {
+    background-image: url(../img/logo.png);
+    background-position: -633px -321px;
+  }
+
+  .navConUser a:nth-child(2) {
+    background-image: url(../img/logo.png);
+    background-position: -610px -585px;
+    margin-left: 30px;
+  }
+
+  .navConUser a:nth-child(3) {
+    background-image: url(../img/logo.png);
+    background-position: -54px -635px;
+    margin-left: 30px;
+  }
+
+  .main {
+    background-color: #fafafa;
+  }
+
+  .mainCon {
+    background-color: #fafafa;
+  }
+
+  .con, .listUser {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .conTopPhoto {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .closeIcon {
+    height: 36px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    z-index: 2;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .closeIcon::before {
+    color: #c7c7c7;
+    content: '\00D7';
+    display: block;
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .addBtn {
+    color: #3897f0;
+    font: inherit;
+    margin: 0;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 10px auto;
+    position: relative;
+
+  }
+
+  .addBtnCon {
+    text-align: center;
+  }
+
+  .addBtnC {
+    display: inline-block;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: -460px -352px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .btnFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  h1 {
+    font-size: 13.33px;
+  }
+
+  .footerCon ul {
+    overflow: auto;
+    text-align: center;
+
+  }
+
+  .footerCon ul:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .footerCon ul li {
+    display: inline;
+    margin-left: 15px;
+  }
+
+  @media (min-width: 640px) {
+    .con {
+      padding-top: 60px;
+    }
+
+    .conTopPhoto {
+      background-color: #fff;
+      border: 1px solid #efefef;
+      border-radius: 3px;
+      margin-left: -1px;
+      margin-right: -1px;
+      position: relative;
+    }
+  }
+</style>

@@ -1,94 +1,117 @@
 <template>
-  <el-menu class="navbar" mode="horizontal">
-    <hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
-    <breadcrumb></breadcrumb>
-    <el-dropdown class="avatar-container" trigger="click">
-      <div class="avatar-wrapper">
-        <img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">
-        <i class="el-icon-caret-bottom"></i>
-      </div>
-      <el-dropdown-menu class="user-dropdown" slot="dropdown">
-        <router-link class="inlineBlock" to="/">
-          <el-dropdown-item>
-            Home
-          </el-dropdown-item>
+  <nav class="nav">
+    <ul class="navCon">
+      <li class="navConLogo">
+        <router-link to="/dashboard">
+          <a></a>
         </router-link>
-        <el-dropdown-item divided>
-          <span @click="logout" style="display:block;">LogOut</span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-menu>
+      </li>
+      <li class="navConSearch">
+        <input id="search" type="text" value="搜索" name="搜索">
+        <span class="serchLogo"></span>
+      </li>
+      <li class="navConUser">
+        <router-link class="nav-child1" to="/databoard/explore">
+          <a title=""></a>
+        </router-link>
+        <router-link class="nav-child2" to="/databoard/dynamic">
+          <a title=""></a>
+        </router-link>
+        <router-link class="nav-child3" to="/databoard/user">
+          <a title=""></a>
+        </router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
-
-export default {
-  components: {
-    Breadcrumb,
-    Hamburger
-  },
-  computed: {
-    ...mapGetters([
-      'sidebar',
-      'avatar'
-    ])
-  },
-  methods: {
-    toggleSideBar() {
-      this.$store.dispatch('ToggleSideBar')
-    },
-    logout() {
-      this.$store.dispatch('LogOut').then(() => {
-        location.reload() // 为了重新实例化vue-router对象 避免bug
-      })
-    }
+<style scoped>
+  .nav {
+    border-bottom: 1px solid #dbdbdb;
+    height: 77px;
   }
-}
-</script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
-.navbar {
-  height: 50px;
-  line-height: 50px;
-  border-radius: 0px !important;
-  .hamburger-container {
-    line-height: 58px;
-    height: 50px;
+  .navCon {
+    max-width: 1010px;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 26px 40px;
+    box-sizing: border-box;
+    /*line-height: 35px;*/
+  }
+
+  .navConLogo {
     float: left;
-    padding: 0 10px;
   }
-  .screenfull {
-    position: absolute;
-    right: 90px;
-    top: 16px;
-    color: red;
+
+  .navConSearch {
+    display: inline;
   }
-  .avatar-container {
-    height: 50px;
+
+  .navConSearch input {
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    padding: 3px 10px 3px 26px;
+    height: 28px;
+    -webkit-box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fafafa;
+    color: #999;
+  }
+
+  .serchLogo {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: -682px -200px;
+    /*background-position: -504px -106px;*/
+    height: 10px;
+    width: 10px;
     display: inline-block;
-    position: absolute;
-    right: 35px;
-    .avatar-wrapper {
-      cursor: pointer;
-      margin-top: 5px;
-      position: relative;
-      .user-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-      }
-      .el-icon-caret-bottom {
-        position: absolute;
-        right: -20px;
-        top: 25px;
-        font-size: 12px;
-      }
-    }
+    position: relative;
+    /*left: -205px;*/
+    left: -135px;
+    /*top: 5px;*/
   }
-}
+
+  .navConLogo a {
+    float: left;
+    width: 176px;
+    height: 35px;
+    background-image: url(../img/logo.png);
+    background-position: -504px -176px;
+  }
+
+  .navConUser {
+    float: right;
+    overflow: auto;
+    box-sizing: border-box;
+    height: 35px;
+  }
+
+  .navConUser a {
+    float: left;
+    width: 24px;
+    height: 24px;
+  }
+
+  .navConUser .nav-child1 {
+    background-image: url(../img/logo.png);
+    background-position: -633px -321px;
+  }
+
+  .navConUser .nav-child2 {
+    background-image: url(../img/logo.png);
+    background-position: -610px -585px;
+    margin-left: 30px;
+  }
+
+  .navConUser .nav-child3 {
+    background-image: url(../img/logo.png);
+    background-position: -54px -635px;
+    margin-left: 30px;
+  }
 </style>
 
