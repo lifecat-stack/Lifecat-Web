@@ -1,57 +1,87 @@
-README -- LifeCat Version3 Front
-===========================
-(正在开发...)
+# lifecat-ins
 
-![java](https://img.shields.io/badge/language-java-red.svg)
 ![许可](https://img.shields.io/dub/l/vibe-d.svg) 
 :cat: :smiley_cat: :kissing_cat:
 
-|title|content|
-|:---:|:---:
-|desc|智能成长相册网站LifeCat-前后端分离前端系统
-|author|ten
-|version|Version 3
-|date|2018
-|framework|Vuejs
-******************************************************************************
- #### _@页面展示_  
-  * [LifeCat官网(version1)主页](http://47.106.11.84)
-  
-  ![官网](Image/官网首页.png)
-  
-  * [LifeCat官网(version3)主页 (待开发)](http://47.106.11.84)
-******************************************************************************
- #### [_@后端接口API文档(正在开发)_](http://47.106.11.84)
-******************************************************************************
- #### _@使用技术_
-  
-  |title|content|
-  |---|---
-  |前端|vuejs
-  |前端框架|bootstrap jQuery Layer Ajax
-  |后端框架|Springboot Mybatis
-  |设计模式|构建者模式 工厂模式 单例模式 责任链模式 代理模式
-  |项目管理|maven 多模块架构
-  |单元测试|Junit4
-  |日志框架|slf4j
-  |安全框架|shiro
-  |消息服务|jms-activemq java-mail
-  |数据库|MySql-mariadb 
-   
-*****************************************************************************
- #### _@项目分析_
+> A minimal vue template imitate 'instagram' with Element UI & axios & iconfont & permission control & lint
+
+**Live demo:** http://www.lifecat.club/lifecat
+
+[中文文档](https://github.com/kevinten10/Web-lifecat/blob/master/README-zh.md)
+
+## cli-use
+
+ [github adress](https://github.com/PanJiaChen/vue-element-admin)
+
+## Related projects
  
- [项目流程分析介绍](https://zhuanlan.zhihu.com/p/41209693) (点击链接)  
+ [web-lifecat](https://github.com/kevinten10/Vue-Admin-lifecat)
  
- 进行了项目结构、项目目录、项目流程的分析
-*****************************************************************************
- ### 相关项目：
- #### [LifeCat version1 servlet基础Javaweb服务网站](https://github.com/kevinten10/lifecatweb)
+## course
  
- #### [LifeCat version2 version1相应SSM后台管理系统](https://github.com/kevinten10/SSM-lifecat)
- #### [LifeCat version3 前后端分离springboot后端系统](https://github.com/kevinten10/springboot-lifecat)
-*****************************************************************************
- #### [LifeCat wechat 微信移动端小程序开发](https://github.com/kevinten10/WeChat-lifecat)
- #### [LifeCat hadoop 分布式平台进行数据处理](https://github.com/kevinten10/Hadoop-lifecat)
- #### [LifeCat android 相应Android相册应用](https://github.com/kevinten10/Android-lifecat)
- #### [LifeCat python 机器学习进行图像智能处理](https://github.com/kevinten10/Python-lifecat)
+ [zhi hu](https://zhuanlan.zhihu.com/p/42595941)
+
+## Build Setup
+
+``` bash
+
+# Clone project
+git clone https://github.com/kevinten10/Web-lifecat.git
+
+# Install dependencies
+npm install
+
+# serve with hot reload at localhost:9528
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+## Demo
+![demo](show1-1.png)
+
+![demo](show1-2.png)
+
+![demo](show1-3.png)
+
+## Extra
+If you want router permission && generate menu by user roles , you can use this branch [permission-control](https://github.com/kevinten10/Web-lifecat/tree/permission-control)
+
+## Related Project
+ [vue-element-admin](https://github.com/kevinten10/vue-element-admin)
+
+ [electron-vue-admin](https://github.com/kevinten10/electron-vue-admin)
+
+### Element-Ui using cdn tutorial
+First find `index.html`([root directory](https://github.com/kevinten10/Web-lifecat/blob/element-ui-cdn/index.html))
+
+Import css and js of `Element`, and then import vue. Because `Element` is vue-dependent, vue must be import before it.
+
+Then find [webpack.base.conf.js](https://github.com/kevinten10/Web-lifecat/blob/element-ui-cdn/build/webpack.base.conf.js)
+Add `externals` to make webpack not package vue and element.
+
+```
+externals: {
+  vue: 'Vue',
+  'element-ui':'ELEMENT'
+}
+```
+
+Finally there is a small detail to pay attention to that if you import vue in global, you don't need to manually `Vue.use(Vuex)`, it will be automatically mounted, see
+ [issue](https://github.com/vuejs/vuex/issues/731)
+
+And you can use `npm run build --report` to see the effect
+
+**[Detailed code](https://github.com/kevinten10/Web-lifecat/commit/746aff560932704ae821f82f10b8b2a9681d5177)**
+
+**[Branch](https://github.com/kevinten10/Web-lifecat/tree/element-ui-cdn)**
+
+
+## License
+[MIT](https://github.com/kevinten10/Web-lifecat/blob/master/LICENSE) license.
+
+Copyright (c) 2017-present kevinten10
