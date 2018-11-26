@@ -7,7 +7,7 @@
         </router-link>
       </li>
       <li class="navConSearch">
-        <input id="search" type="text" value="搜索" name="搜索">
+        <input id="search" type="text" name="搜索" placeholder="搜索">
         <span class="serchLogo"></span>
       </li>
       <li class="navConUser">
