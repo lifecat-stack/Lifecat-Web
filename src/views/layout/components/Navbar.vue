@@ -2,7 +2,7 @@
   <nav class="nav">
     <ul class="navCon">
       <li class="navConLogo">
-        <router-link to="/dashboard">
+        <router-link to="/home">
           <a></a>
         </router-link>
       </li>
@@ -14,7 +14,7 @@
         <router-link class="nav-child1" to="/databoard/explore">
           <a title=""></a>
         </router-link>
-        <router-link class="nav-child2" to="/databoard/dynamic">
+        <router-link class="nav-child2" to="/databoard/favorite">
           <a title=""></a>
         </router-link>
         <router-link class="nav-child3" to="/databoard/user">

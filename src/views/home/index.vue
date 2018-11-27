@@ -2,26 +2,7 @@
   <main class="main-1  main-2" role="main">
     <div class="main-3 main-4">
 
-      <div class="user-container">
-        <h2 class="explore">
-          发现用户
-          <a class="recommend-user-all-1 recommend-user-all-2"
-             href="/explore/people/">
-            查看全部
-            <span class="coreSpriteChevronRight Rj5u6"></span>
-          </a>
-        </h2>
-
-        <!--推荐用户-->
-        <div class="recommend-user">
-          <recommend-user :user="userList[0]"></recommend-user>
-          <recommend-user :user="userList[1]"></recommend-user>
-          <recommend-user :user="userList[2]"></recommend-user>
-        </div>
-      </div>
-
-
-      <h2 class="explore">探索</h2>
+      <h2 class="explore">主页</h2>
       <article class="recommend-dynamic">
         <div>
           <div style="flex-direction: column; padding-bottom: 0px; padding-top: 0px;">
@@ -46,14 +27,12 @@
 
 <script>
   import recommendDynamic from '@/components/Dynamic'
-  import recommendUser from '@/components/RecommendUser'
   import {getRecommendDynamic, getRecommendUser} from '@/api/recommend'
 
   export default {
-    name: 'explore',
+    name: 'home',
     components: {
-      recommendDynamic,
-      recommendUser
+      recommendDynamic
     },
     data() {
       return {
@@ -85,6 +64,6 @@
 </script>
 
 <style scoped>
-  @import "../../../styles/user-panel.scss";
-  @import "../../../styles/dynamic-panel.scss";
+  @import "../../styles/dynamic-panel.scss";
+  @import "../../styles/user-panel.scss";
 </style>

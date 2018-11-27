@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
-import transactionAPI from './transaction'
 import loginAPI from './login'
 import databoardAPI from './databoard'
+import recommendAPI from './recommend'
 // import dashboardAPI from './dashboard'
 
 // Mock.setup({
@@ -25,7 +25,8 @@ Mock.mock(/\/images/, 'get', databoardAPI.getImageList)
 // 获取所有record
 Mock.mock(/\/records/, 'get', databoardAPI.getDynamicList)
 
-// 统计表相关
-Mock.mock(/\/transactions/, 'get', transactionAPI.getList)
+// 推荐
+Mock.mock(/\/recommend\/dynamic/,'get',recommendAPI.getDynamicList)
+Mock.mock(/\/recommend\/user/,'get',recommendAPI.getUserList)
 
 export default Mock

@@ -1,13 +1,13 @@
 <template>
-  <div class="v1Nh3 kIKUG  _bz0w">
-    <a href="/p/BmXCpkdlkDT/?explore=true">
-      <div class="eLAPa">
-        <div class="KL4Bh">
-          <img class="FFVAD" decoding="auto" sizes="293px"
-               :src="image.url"
-               :alt="image.alt">
+  <div class="container-1 container-2 container-3">
+    <a href="/dynamicDetail?dynamicId=">
+      <div class="dynamic-1">
+        <div class="dynamic-2">
+          <img class="dynamic-image" sizes="293px"
+               :src="dynamic.dynamicImageUrl"
+               :alt="dynamic.dynamicContent">
         </div>
-        <div class="_9AhH0"></div>
+        <div class="dynamic-3"></div>
       </div>
     </a>
   </div>
@@ -15,15 +15,16 @@
 
 <script>
   export default {
-    name: "dynamicRecommend",
+    name: "dynamic",
     props: {
-      image: {
+      dynamic: {
         type: Object,
-        // requied: true,
         default: function () {
           return {
-            url: 'https://scontent-hkg3-2.cdninstagram.com/vp/6900622e064670562b77a723bb2cdb3b/5C0B2B30/t51.2885-15/sh0.08/e35/s640x640/38483528_2088432051405646_2428085715557416960_n.jpg',
-            alt: 'Sarchitects #editionofficetalks #architecture #australianarchitecture #localism #virginiakerridge #chrofi #dfjarchitects',
+            id: "0",
+            userId: "0",
+            dynamicImageUrl: 'http://ku.90sjimg.com/element_origin_min_pic/01/37/92/40573c69065b76e.jpg',
+            dynamicContent: '图片加载失败',
           }
         }
       }
@@ -183,7 +184,7 @@
   }
 
   /*! CSS Used from: Embedded */
-  .kIKUG:active {
+  .container-2:active {
     opacity: 1;
   }
 
@@ -258,25 +259,25 @@
   }
 
   /*! CSS Used from: Embedded */
-  .eLAPa {
+  .dynamic-1 {
     background-color: #efefef;
     display: block;
     width: 100%;
   }
 
-  .KL4Bh {
+  .dynamic-2 {
     display: block;
     overflow: hidden;
     padding-bottom: 100%;
   }
 
-  .FFVAD, ._9AhH0 {
+  .dynamic-image, .dynamic-3 {
     left: 0;
     position: absolute;
     top: 0;
   }
 
-  .FFVAD {
+  .dynamic-image {
     height: 100%;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -285,13 +286,13 @@
     width: 100%;
   }
 
-  ._9AhH0 {
+  .dynamic-3 {
     bottom: 0;
     right: 0;
   }
 
   /*! CSS Used from: Embedded */
-  .v1Nh3 {
+  .container-1 {
     display: block;
     position: relative;
     width: 100%;
@@ -323,12 +324,12 @@
     margin-bottom: 0;
   }
 
-  ._bz0w:last-child {
+  .container-3:last-child {
     margin-right: 0;
   }
 
   @media (min-width: 736px) {
-    ._bz0w {
+    .container-3 {
       margin-right: 28px;
     }
 
@@ -338,7 +339,7 @@
   }
 
   @media (max-width: 735px) {
-    ._bz0w {
+    .container-3 {
       margin-right: 3px;
     }
 
